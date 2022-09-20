@@ -1,0 +1,16 @@
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\bin\Debug\CsQueryFramawork.exe.config
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\bin\Debug\CsQueryFramawork.exe
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\bin\Debug\CsQueryFramawork.pdb
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\bin\Debug\CsQuery.dll
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\bin\Debug\CsQuery.xml
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\obj\Debug\CsQueryFramawork.csproj.AssemblyReference.cache
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\obj\Debug\CsQueryFramawork.csproj.SuggestedBindingRedirects.cache
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\obj\Debug\CsQueryFramawork.csproj.CoreCompileInputs.cache
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\obj\Debug\CsQueryFramawork.csproj.CopyComplete
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\obj\Debug\CsQueryFramawork.exe
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\obj\Debug\CsQueryFramawork.pdb
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\bin\Debug\EntityFramework.dll
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\bin\Debug\EntityFramework.SqlServer.dll
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\bin\Debug\EntityFramework.xml
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\bin\Debug\EntityFramework.SqlServer.xml
+E:\demo\Tool\CsQuery\ConsoleApp1\CsQueryFramawork\bin\Debug\zh-Hans\EntityFramework.resources.dll
