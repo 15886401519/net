@@ -1,0 +1,164 @@
+<style type="text/css">.content-window-card {
+            position: relative;
+            box-shadow: none;
+            bottom: 0;
+            left: 0;
+            width: 340px;
+            padding: 0;
+        }
+    
+        .content-window-card p {
+            height: 2rem;
+        }
+    
+        .custom-info {
+            border: solid 1px silver;
+        }
+    
+        div.info-top {
+            position: relative;
+            background: none repeat scroll 0 0 #F9F9F9;
+            border-bottom: 1px solid #CCC;
+            border-radius: 5px 5px 0 0;
+        }
+    
+        div.info-top div {
+            display: inline-block;
+            color: #333333;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 31px;
+            padding: 0 10px;
+        }
+    
+        div.info-top img {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transition-duration: 0.25s;
+        }
+    
+        div.info-top img:hover {
+            box-shadow: 0px 0px 5px #000;
+        }
+    
+        div.info-middle {
+            font-size: 12px;
+            padding: 10px 6px;
+            line-height: 20px;
+        }
+    
+        div.info-bottom {
+            height: 0px;
+            width: 100%;
+            clear: both;
+            text-align: center;
+        }
+    
+        div.info-bottom img {
+            position: relative;
+            z-index: 104;
+        }
+    
+        span {
+            margin-left: 5px;
+            font-size: 11px;
+        }
+    
+        .info-middle img {
+            float: left;
+            margin-right: 6px;
+        }
+    	.amap-icon{overflow: inherit !important;}
+    	.amap-icon img{ animation: donghua 0.5s linear  infinite alternate;}
+    	@keyframes donghua
+    	{
+    	    from {top: 10px;}
+    	    to {top: 0px;}
+    	}
+    	 
+    	@-webkit-keyframes donghua /* Safari 与 Chrome */
+    	{
+    	    from {top: 10px;}
+    	    to {top: 0px;}
+    	}
+div#container1 {
+    height: 500px;
+    margin-bottom: 50px;
+}
+</style>
+<div id="container1">&nbsp;</div>
+<!-- 加载地图JSAPI脚本 --><script src="https://webapi.amap.com/maps?v=1.4.15&key=cd2d837db8e5684dda7bfa2d8d1f9078"></script><!-- <script src="jquery.min.js"></script> --><script>
+    var map = new AMap.Map('container1', {
+        resizeEnable: true, //是否监控地图容器尺寸变化
+        zoom:15, //初始化地图层级
+        //lang: "en",//英文
+        center: [114.976861,35.774578] //初始化地图中心点
+    });
+	addMarker();
+	//添加marker标记
+	function addMarker() {
+	    map.clearMap();
+	    var marker = new AMap.Marker({
+	        map: map,
+	        position: [114.976861,35.774578]
+	    });
+	    //鼠标点击marker弹出自定义的信息窗体
+	    AMap.event.addListener(marker, 'click', function () {
+	        infoWindow.open(map, marker.getPosition());
+	    });
+	}
+	//实例化信息窗体
+	var title = '濮阳蓝星新材料有限公司</span>',
+	    content = [];
+	content.push("濮阳市胜利路北濮源路西");
+	var infoWindow = new AMap.InfoWindow({
+	    isCustom: true,  //使用自定义窗体
+	    content: createInfoWindow(title, content.join("<br/>")),
+	    offset: new AMap.Pixel(16, -45)
+	});
+	//构建自定义信息窗体
+	function createInfoWindow(title, content) {
+	    var info = document.createElement("div");
+	    info.className = "custom-info input-card content-window-card";
+	
+	    //可以通过下面的方式修改自定义窗体的宽高
+	    //info.style.width = "400px";
+	    // 定义顶部标题
+	    var top = document.createElement("div");
+	    var titleD = document.createElement("div");
+	    var closeX = document.createElement("img");
+	    top.className = "info-top";
+	    titleD.innerHTML = title;
+	    closeX.src = "https://webapi.amap.com/images/close2.gif";
+	    closeX.onclick = closeInfoWindow;
+	
+	    top.appendChild(titleD);
+	    top.appendChild(closeX);
+	    info.appendChild(top);
+	
+	    // 定义中部内容
+	    var middle = document.createElement("div");
+	    middle.className = "info-middle";
+	    middle.style.backgroundColor = 'white';
+	    middle.innerHTML = content;
+	    info.appendChild(middle);
+	
+	    // 定义底部内容
+	    var bottom = document.createElement("div");
+	    bottom.className = "info-bottom";
+	    bottom.style.position = 'relative';
+	    bottom.style.top = '0px';
+	    bottom.style.margin = '0 auto';
+	    var sharp = document.createElement("img");
+	    sharp.src = "https://webapi.amap.com/images/sharp.png";
+	    bottom.appendChild(sharp);
+	    info.appendChild(bottom);
+	    return info;
+	}
+	
+	//关闭信息窗体
+	function closeInfoWindow() {
+	    map.clearInfoWindow();
+	}
+</script>
